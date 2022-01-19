@@ -1,13 +1,13 @@
+
 <template>
-    <div>
+    <div style="margin: 0 auto; width:80%">
         <b-card title="MENU" class="ml-5 mr-5 mb-5">
-            <b-button variant="success" class="mb-4">AGREGAR</b-button>
+            <b-button variant="success" class="mb-4" style="margin-left: -50em"  v-on:click="agregar">AGREGAR</b-button>
             <table class="table">
                 <thead>
                     <tr>
                         <th>NRO</th>
                         <th>DESCRIPCION</th>
-                        <th>CALORIAS</th>
                         <th></th>
                     </tr>
                 </thead>
@@ -16,24 +16,31 @@
                         <td>{{todo.id}}</td>
                         <td>{{todo.nombre}}</td>
                         <td>
-                            <b-button variant="dark" class="mr-2">VER DETALES</b-button>
-                            <b-button variant="warning" class="mr-2">EDITAR</b-button>
-                            <b-button variant="danger" >ELIMINAR</b-button>
+                            
+                            <b-button variant="warning" class="mr-2" v-on:click="editar">EDITAR</b-button>
+                            <b-button variant="danger" class="mr-2"  v-on:click="eliminar">ELIMINAR</b-button>
+                            <b-button variant="dark" class="mr-2" v-on:click="verDetalles">VER DETALES</b-button>
                         </td>
                     </tr>
                 </tbody>
-            </table>  
+            </table> 
         </b-card>
     </div>
+    
+    
 </template>
+
 <script>
 import axios from 'axios'
+
 export default{
     data(){
         return{
-            todos:null
+            todos:null,
+            event: "click"
         }
     },
+    
     mounted(){
         this.getTodos();
     },
@@ -46,6 +53,19 @@ export default{
                     this.todos = response.data
                 })
                 .catch(e=> console.log(e))
+        },
+        agregar() {
+            alert("Usted seleccionó agregar");
+            
+        },
+        editar() {
+            alert("Usted seleccionó Editar");
+        },
+        eliminar() {
+            alert("Usted seleccionó Eliminar");
+        },
+        verDetalles() {
+            alert("Usted seleccionó Ver detalles");
         }
     }
     

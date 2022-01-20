@@ -1,12 +1,10 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link> |
       <router-link to="/TablaBurger">TABLA BURGER</router-link> |
       <router-link to="/TablaBurgerAgregar">AGREGAR BURGER</router-link> |
       <router-link to="/TablaBurgerEditar">EDITAR BURGER</router-link> |
-      <router-link to="/TablaBurgerEliminar">DETALLES BURGER</router-link> 
+       <router-link to="/TablaBurgerDetalles">DETALLES BURGER</router-link> 
     </div>
     <router-view/>
   </div>

@@ -5,7 +5,7 @@ import TablaBurger from '@/components/TablaBurger.vue'
 import TablaBurgerAgregar from '@/components/TablaBurgerAgregar.vue'
 import TablaBurgerEditar from '@/components/TablaBurgerEditar.vue'
 import TablaBurgerEliminar from '@/components/TablaBurgerEliminar.vue'
-
+import TablaBurgerDetalles from '@/components/TablaBurgerDetalles.vue'
 
 Vue.use(VueRouter)
 
@@ -19,6 +19,11 @@ const routes = [
     path: '/TablaBurger',
     name: 'TablaBurger',
     component: TablaBurger
+  },
+  {
+    path: '/TablaBurgerDetalles',
+    name: 'TablaBurgerDetalles',
+    component: TablaBurgerDetalles
   },
   {
     path: '/TablaBurgerAgregar',

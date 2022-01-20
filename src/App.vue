@@ -1,13 +1,29 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/TablaBurger">TABLA BURGER</router-link> |
-      <router-link to="/TablaBurgerAgregar">AGREGAR BURGER</router-link> |
-      <router-link to="/TablaBurgerEditar">EDITAR BURGER</router-link> |
-       <router-link to="/TablaBurgerDetalles">DETALLES BURGER</router-link> 
+    <div>
+      <b-navbar toggleable="lg" type="dark" variant="dark">
+        <b-navbar-brand href="#">THE BURGER PRINCE</b-navbar-brand>
+        <b-collapse id="nav-collapse" is-nav>
+          <!------- Right aligned nav items -->
+          <b-navbar-nav class="ml-auto">
+            <div>
+              <b-button-group>
+                <b-button to="/" class="mr-1">HOME</b-button>
+                <b-button to="/TablaBurger" class="mr-1">TABLA BURGER</b-button>
+                <b-button to="/TablaBurgerAgregar" class="mr-1">AGREGAR BURGER</b-button> 
+              </b-button-group>
+            </div>
+          </b-navbar-nav>
+        </b-collapse>
+      </b-navbar> 
     </div>
     <router-view/>
-  </div>
+    
+  <!-------- footer -->
+   
+      
+</div>
+
 </template>
 
 <style>
@@ -31,4 +47,5 @@
 #nav a.router-link-exact-active {
   color: #42b983;
 }
+
 </style>

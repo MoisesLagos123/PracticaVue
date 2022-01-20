@@ -1,6 +1,6 @@
 
 <template>
-    <div style="margin: 0 auto; width:80%">
+    <div class="mt-4" style="margin: 0 auto; width:60%">
         <b-card title="MENU" class="ml-5 mr-5 mb-5">
             
             <table class="table">
@@ -16,9 +16,9 @@
                         <td >{{todo.id}}</td>
                         <td>{{todo.nombre}}</td>
                         <td>
-                            <b-button variant="warning" class="mr-2" v-on:click="editar(todo)" v-b-modal.modal-1>EDITAR</b-button>
-                            <b-button variant="danger" class="mr-2"  v-on:click="eliminar(todo.id)">ELIMINAR</b-button>
-                            <b-button variant="dark" class="mr-2" v-on:click="verDetalles" v-b-modal.modal-2>VER DETALES</b-button>
+                            <b-button  class="mr-2" variant="outline-light" v-on:click="editar(todo)" v-b-modal.modal-1> <img src="../assets/editar.png"> </b-button>
+                            <b-button  class="mr-2" variant="outline-light" v-on:click="eliminar(todo.id)"> <img src="../assets/boton-x.png"> </b-button>
+                            <b-button  class="mr-2" variant="outline-light" v-on:click="verDetalles" v-b-modal.modal-2> <img src="../assets/evaluacion.png"> </b-button>
                         </td>
                     </tr>
                 </tbody>

@@ -1,5 +1,5 @@
 <template>
-  <div style="margin: 0 auto; width:80%">
+  <div class="mt-4" style="margin: 0 auto; width:60%">
       <b-card title="Agregar MENU" class="ml-5 mr-5 mb-5">
         <b-form @submit="onSubmit" v-if="show">
         <b-form-group id="nombre" label="Nombre" label-for="nombre">
@@ -17,7 +17,6 @@
             id="ingredientes"
             v-model="form.ingredientes"
             placeholder="ingresa ingredientes"
-            
             ></b-form-input>
             <b-button v-on:click="agregar" variant="primary" class="mt-2">Agregar Ingrediente</b-button>
         </b-form-group>
@@ -58,12 +57,17 @@ let ArIngredientes =[]
     methods: {
       onSubmit(event) {
         event.preventDefault()
+        if(ArIngredientes.length == 0){
+            alert('Debe ingresar por lo menos un ingrediente')
+        }else{
+            const insert = axios.post("https://prueba-hamburguesas.herokuapp.com/burger/",{nombre: this.form.nombre, ingredientes: ArIngredientes, calorias: this.form.calorias})
+            if(insert){
+                alert('Se ha agregado un nuevo menu')
+            }else{
+                alert('No fue posible agregar este menu')
+            }
+        }
         
-        axios
-            .post("https://prueba-hamburguesas.herokuapp.com/burger/",{nombre: this.form.nombre, ingredientes: ArIngredientes, calorias: this.form.calorias})
-
-            
-
       },
       
         agregar() {

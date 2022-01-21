@@ -6,7 +6,7 @@
         <b-collapse id="nav-collapse" is-nav>
           <!------- Right aligned nav items -->
           <b-navbar-nav class="ml-auto">
-            <div>
+            <div class="col-sm-12">
               <b-button-group>
                 <b-button to="/" class="mr-1">HOME</b-button>
                 <b-button to="/TablaBurger" class="mr-1">TABLA BURGER</b-button>

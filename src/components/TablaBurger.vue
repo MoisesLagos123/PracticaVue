@@ -1,13 +1,13 @@
 
 <template>
     <div class="mt-4 row justify-content-center">
-        <div class="col-lg-8 mt-5 ">
+        <div class="col-lg-10 mt-5 ">
         <!-------- Tabla Menu ---------->
 
         <b-card title="MENU" class="ml-5 mr-5 mb-5 shadow-lg"> 
             <div class="row justify-content-center">
-                <div class="col-lg-6">
-                    <table class="table table-bordered  table-hover " >
+                <div class="col-lg-8">
+                    <table class="table table-bordered  table-hover" >
                     <thead class="thead-dark">
                         <tr>
                             <th>NRO</th>
@@ -43,30 +43,30 @@
                     <b-form  v-if="show" @submit="editar" >
                         <b-form-group id="numero" label="Numero:" label-for="numero">
                             <b-form-input
-                            id="numero"
-                            v-model="form.numero"
-                            type="text"
-                            placeholder="No hay numero de Menu"
-                            disabled
+                                id="numero"
+                                v-model="form.numero"
+                                type="text"
+                                placeholder="No hay numero de Menu"
+                                disabled
                             ></b-form-input>
                         </b-form-group>
 
                         <b-form-group id="nombre" label="Nombre" label-for="nombre">
                             <b-form-input
-                            id="nombre"
-                            v-model="form.nombre"
-                            type="text"
-                            placeholder="Ingresa nombre del plato"
-                            required
+                                id="nombre"
+                                v-model="form.nombre"
+                                type="text"
+                                placeholder="Ingresa nombre del plato"
+                                required
                             ></b-form-input>
                         </b-form-group>
                         <b-form-group id="calorias" label="calorias:" label-for="calorias">
                             <b-form-input
-                            id="calorias"
-                            type="number"
-                            v-model="form.calorias"
-                            placeholder="ingresa numero de calorias"
-                            required
+                                id="calorias"
+                                type="number"
+                                v-model="form.calorias"
+                                placeholder="ingresa numero de calorias"
+                                required
                             ></b-form-input >
                         </b-form-group>
                         <b-card  class="ml-1 mr-1 mb-5">
@@ -105,41 +105,41 @@
                 <b-form  v-if="show">
                         <b-form-group id="numero" label="Numero:" label-for="numero">
                             <b-form-input
-                            id="numero"
-                            v-model="form.numero"
-                            type="text"
-                            placeholder="No hay numero de Menu"
-                            disabled
+                                id="numero"
+                                v-model="form.numero"
+                                type="text"
+                                placeholder="No hay numero de Menu"
+                                disabled
                             ></b-form-input>
                         </b-form-group>
 
                         <b-form-group id="nombre" label="Nombre" label-for="nombre">
                             <b-form-input
-                            id="nombre"
-                            v-model="form.nombre"
-                            type="text"
-                            placeholder="No hay nombre del plato"
-                            disabled
+                                id="nombre"
+                                v-model="form.nombre"
+                                type="text"
+                                placeholder="No hay nombre del plato"
+                                disabled
                             ></b-form-input>
                         </b-form-group>
     
                         <b-form-group id="ingredientes" label="ingredientes:" ref="ingredientes" label-for="ingredientes">
                             <b-form-input
-                            id="ingredientes"
-                            v-model="form.ingredientes"
-                            placeholder="No hay ingredientes"
-                            disabled
+                                id="ingredientes"
+                                v-model="form.ingredientes"
+                                placeholder="No hay ingredientes"
+                                disabled
                             ></b-form-input>
                             
                         </b-form-group>
 
                         <b-form-group id="calorias" label="calorias:" label-for="calorias">
                             <b-form-input
-                            id="calorias"
-                            type="number"
-                            v-model="form.calorias"
-                            placeholder="No hay numero de calorias"
-                            disabled
+                                id="calorias"
+                                type="number"
+                                v-model="form.calorias"
+                                placeholder="No hay numero de calorias"
+                                disabled
                             ></b-form-input >
                         </b-form-group>
                     </b-form>
@@ -151,21 +151,21 @@
                 <b-form  v-if="show">
                         <b-form-group id="numero" label="Numero:" label-for="numero">
                             <b-form-input
-                            id="numero"
-                            v-model="form.numero"
-                            type="text"
-                            placeholder="No hay numero de Menu"
-                            disabled
+                                id="numero"
+                                v-model="form.numero"
+                                type="text"
+                                placeholder="No hay numero de Menu"
+                                disabled
                             ></b-form-input>
                         </b-form-group>
 
                         <b-form-group id="nombre" label="Nombre" label-for="nombre">
                             <b-form-input
-                            id="nombre"
-                            v-model="form.nombre"
-                            type="text"
-                            placeholder="No hay nombre del plato"
-                            disabled
+                                id="nombre"
+                                v-model="form.nombre"
+                                type="text"
+                                placeholder="No hay nombre del plato"
+                                disabled
                             ></b-form-input>
                         </b-form-group>
                     </b-form>

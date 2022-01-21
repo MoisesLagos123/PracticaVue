@@ -1,28 +1,25 @@
 <template>
   <div id="app">
     <div>
-      <b-navbar toggleable="lg" type="dark" variant="dark">
-        <b-navbar-brand href="#">THE BURGER PRINCE</b-navbar-brand>
-        <b-collapse id="nav-collapse" is-nav>
-          <!------- Right aligned nav items -->
-          <b-navbar-nav class="ml-auto">
-            <div class="col-sm-12">
-              <b-button-group>
-                <b-button to="/" class="mr-1">HOME</b-button>
-                <b-button to="/TablaBurger" class="mr-1">TABLA BURGER</b-button>
-                <b-button to="/TablaBurgerAgregar" class="mr-1">AGREGAR BURGER</b-button> 
-              </b-button-group>
-            </div>
-          </b-navbar-nav>
-        </b-collapse>
-      </b-navbar> 
-    </div>
+      <b-navbar type="dark" variant="dark">
+        <b-navbar-nav>
+          <b-nav-item href="/">THE BURGER PRINCE</b-nav-item>
+
+          <!-- Navbar dropdowns -->
+          
+          <b-nav-item-dropdown text="MENU" right>
+            <b-dropdown-item href="/TablaBurger">LISTADO DEL MENU</b-dropdown-item>
+            <b-dropdown-item href="/TablaBurgerAgregar">AGREGAR NUEVO MENU</b-dropdown-item>
+
+          </b-nav-item-dropdown>
+        </b-navbar-nav>
+      </b-navbar>
+    </div>  
     <router-view/>
     
   <!-------- footer -->
-   
-      
-</div>
+    
+  </div>
 
 </template>
 

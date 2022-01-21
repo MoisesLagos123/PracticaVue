@@ -101,7 +101,7 @@
             </b-modal>
 
             <!-------- Modal Visualizar ---------->
-            <b-modal id="modal-2" title="DETALLES DEL MENÚ">
+            <b-modal ok-only  id="modal-2" title="DETALLES DEL MENÚ">
                 <b-form  v-if="show">
                         <b-form-group id="numero" label="Numero:" label-for="numero">
                             <b-form-input
@@ -146,7 +146,7 @@
             </b-modal>
 
              <!-------- Modal Eliminar ---------->
-            <b-modal id="modal-3" title="Eliminar MENU" @ok="eliminar(form.numero)">
+            <b-modal  id="modal-3" title="Eliminar MENU" @ok="eliminar(form.numero)">
                 <H5>¿Seguro que deseas eliminar este plato del menú?</H5>
                 <b-form  v-if="show">
                         <b-form-group id="numero" label="Numero:" label-for="numero">

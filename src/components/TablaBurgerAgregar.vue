@@ -1,25 +1,38 @@
 <template>
-  <div class="mt-4" style="margin: 0 auto; width:60%">
-      <b-card title="Agregar MENU" class="ml-5 mr-5 mb-5">
+  <div class="mt-4 row justify-content-center">
+      <div class="col-lg-6 mt-5 ">
+        <b-card title="AGREGAR MENU" class="ml-5 mr-5 mb-5 mt-5 pt-3 shadow-lg">
         <b-form @submit="onSubmit" v-if="show">
-        <b-form-group id="nombre" label="Nombre" label-for="nombre">
+        <b-form-group id="nombre" label="Nombre" label-for="nombre" class="mt-4">
             <b-form-input
-            id="nombre"
-            v-model="form.nombre"
-            type="text"
-            placeholder="Ingresa nombre del plato"
-            required
+              id="nombre"
+              v-model="form.nombre"
+              type="text"
+              placeholder="Ingresa nombre del plato"
+              required
             ></b-form-input>
         </b-form-group>
 
-        <b-form-group id="ingredientes" label="ingredientes:" ref="ingredientes" label-for="ingredientes">
-            <b-form-input
-            id="ingredientes"
-            v-model="form.ingredientes"
-            placeholder="ingresa ingredientes"
+          <b-form-group id="ingredientes" label="ingredientes:" ref="ingredientes" label-for="ingredientes">
+
+              <div class="input-group mb-3">
+              <b-form-input 
+                class="form-control" 
+                id="ingredientes" 
+                v-model="form.ingredientes" 
+                placeholder="ingresa ingredientes"
             ></b-form-input>
-            <b-button v-on:click="agregar" variant="primary" class="mt-2">Agregar Ingrediente</b-button>
-        </b-form-group>
+            <div class="input-group-append">
+              <b-button v-on:click="agregar"  variant="outline-primary">Agregar Ingrediente</b-button>
+            </div>
+            </div>
+           
+
+            
+            
+          </b-form-group>
+    
+        
 
         <b-form-group id="calorias" label="calorias:" label-for="calorias">
             <b-form-input
@@ -32,10 +45,12 @@
         </b-form-group>
 
 
-        <b-button type="submit" variant="primary" class="mr-4">Crear Nuevo Menu</b-button>
+        <b-button type="submit" variant="primary"  class="mr-4">Crear Nuevo Menu</b-button>
         </b-form>
 
     </b-card>
+      </div>
+      
   </div>
 </template>
 
